@@ -57,6 +57,7 @@ public class ContaCorrente {
                 System.out.println("Titular da conta: "+c.getTitular());
                 System.out.println("Número da conta: "+c.getNumero());
                 System.out.println("Saldo atual: "+c.getSaldo());
+                System.out.println("Saques realizados hoje: " + c.saques + "\n");
             }
             System.out.println("Deseja continuar? s - sim/ n - não");
             execucao = in.next();

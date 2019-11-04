@@ -1,7 +1,7 @@
 package contacorrente;
 
 public class Movimentacao {
-    int numero;
+    int numero, saques;
     String titular;
     double saldo;
    
@@ -9,10 +9,12 @@ public class Movimentacao {
         this.numero=numero;
         this.titular=nome;
         this.saldo=saldo;
+        saques=0;
     }
     boolean sacar(double valor){
         if(valor>0){
             this.saldo-=valor;
+            saques++;
             return true;
         }else{
             return false;
