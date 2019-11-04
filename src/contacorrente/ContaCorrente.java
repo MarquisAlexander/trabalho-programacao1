@@ -14,10 +14,12 @@ public class ContaCorrente {
         double saldoinicial,valor;
        
         while(continuar==true){
+//Menu inicial da aplicação
             System.out.println("Digite 1 para criar conta, "
                     + "2 para sacar, 3 para depositar, 4 para ver"
                     + " o saldo e 5 para status geral da conta: ");
             escolha = in.nextInt();
+//criando uma nova conta no banco
             if(escolha==1){           
                 System.out.println("Digite o nome do titular: ");
                 nome = in.next();
@@ -28,6 +30,7 @@ public class ContaCorrente {
                 c = new Movimentacao(numero,nome,saldoinicial);
                 System.out.println("Saldo atual: "+c.getSaldo());
             }
+//definindo um valor para sacar
             if(escolha==2){
                 System.out.println("Digite o valor que deseja sacar: ");
                 valor = in.nextDouble();
@@ -39,6 +42,7 @@ public class ContaCorrente {
                     System.out.println("Valor inválido!");
                 }
             }
+//definindo um valor para depositar
             if(escolha==3){
                 System.out.println("Digite o valor que deseja depositar: ");
                 valor = in.nextDouble();
@@ -50,15 +54,18 @@ public class ContaCorrente {
                 System.out.println("Valor inválido.");
                 }
             }
+//mostrando apenas o saldo
             if(escolha==4){
                 System.out.println("Saldo atual: "+c.getSaldo());
             }
+//mostrando todas as informações da conta
             if(escolha==5){
                 System.out.println("Titular da conta: "+c.getTitular());
                 System.out.println("Número da conta: "+c.getNumero());
                 System.out.println("Saldo atual: "+c.getSaldo());
                 System.out.println("Saques realizados hoje: " + c.saques + "\n");
             }
+//perguntando se deseja finalizar ou continuar na aplicação
             System.out.println("Deseja continuar? s - sim/ n - não");
             execucao = in.next();
             if(execucao.equals("n")){
